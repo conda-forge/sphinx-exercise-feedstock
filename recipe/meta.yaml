@@ -1,5 +1,5 @@
 {% set name = "sphinx-exercise" %}
-{% set version = "0.3.1" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4a69f9a02e5525724e4a48a15e003cd6c495e68bafa734118510bea46d985392
+  sha256: 5cbcd8f21a6a9fe82d9b5eed02421891634a4a0f631bbdb9c4a37493eb2244d4
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install --no-deps . -vv"
+  script: {{ PYTHON }} -m pip install --no-deps . -vv
 
 requirements:
   host:
@@ -38,7 +38,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'A Sphinx extension for producing exercises and solutions.'
+  summary: A Sphinx extension for producing exercises and solutions.
   description: |
     This package contains a Sphinx extension for producing exercise and
     solution directives.
