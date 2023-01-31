@@ -1,5 +1,5 @@
 {% set name = "sphinx-exercise" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5cbcd8f21a6a9fe82d9b5eed02421891634a4a0f631bbdb9c4a37493eb2244d4
+  sha256: cc24a2770bf75b88423acc27eb3f87759fa7cbe2137a6ef797a067597c28e311
 
 build:
   noarch: python
@@ -19,9 +19,9 @@ requirements:
     - python >=3.6
     - pip
   run:
-    - docutils >=0.15
+    - docutils >=0.18
     - python >=3.6
-    - sphinx >=3.0
+    - sphinx >=4.0
     - sphinx-book-theme
 
 test:
