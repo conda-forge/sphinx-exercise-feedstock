@@ -19,9 +19,9 @@ requirements:
     - python >=3.6
     - pip
   run:
-    - docutils >=0.15
+    - docutils >=0.18
     - python >=3.6
-    - sphinx >=3.0
+    - sphinx >=4.0
     - sphinx-book-theme
 
 test:
