@@ -1,5 +1,6 @@
 {% set name = "sphinx-exercise" %}
 {% set version = "1.1.0" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +13,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install --no-deps . -vv
+  script: {{ PYTHON }} -m pip install --no-deps --no-build-isolation . -vv
 
 requirements:
   host:
@@ -21,10 +22,12 @@ requirements:
     - python {{ python_min }}
   run:
     - python >={{ python_min }}
-    - sphinx >=5.0
+    - sphinx >=6.1
     - sphinx-book-theme
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - sphinx_exercise
     - sphinx_exercise.directive
