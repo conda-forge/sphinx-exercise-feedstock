@@ -1,5 +1,5 @@
 {% set name = "sphinx-exercise" %}
-{% set version = "1.2.0" %}
+{% set version = "1.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 4bcd80eb578e347977f63bdb475a3e8d33a56d5b088833c018e5c92abb4a26fb
+  sha256: 3cfb46b8fc4bbc8e6955f0064128a54d3f3895579591a5219d891eedf11c7108
 
 build:
   noarch: python
