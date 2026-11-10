@@ -1,13 +1,13 @@
 {% set name = "sphinx-exercise" %}
-{% set version = "1.2.1" %}
+{% set version = "1.2.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 3cfb46b8fc4bbc8e6955f0064128a54d3f3895579591a5219d891eedf11c7108
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 738459d800a116151fe76c78e6c739ad37e30e7e7a45648ac2b597a540578eff
 
 build:
   noarch: python
